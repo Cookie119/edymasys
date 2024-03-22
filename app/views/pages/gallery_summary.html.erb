@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="shortcut icon" type="images" href="images/logo.jpg">
+    <style>
+        /* Additional CSS for the vintage photo effect and film margins */
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 16px; /* Adjust the border-radius as needed for the sticker effect */
+            margin: 8px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            filter: sepia(20%) grayscale(10%);
+        }
+
+        .gallery-card:before {
+            content: '';
+            position: absolute;
+            bottom: -20%; /* Adjust the bottom part size as needed */
+            left: 0;
+            right: 0;
+            height: 120%; /* Adjust the height to cover the bottom part */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .gallery-card img {
+            transition: transform 0.3s ease-in-out;
+            z-index: 2;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05); /* Adjust the scale factor as needed */
+        }
+
+        .gallery-card button {
+            border: none; /* Add this line to remove the button border */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            outline: none; /* Remove the default focus outline */
+            z-index: 3;
+        }
+
+        .gallery-card:hover button {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+<section class="bg-blue-900">
+  <div class="mx-auto grid max-w-lg gap-x-8 gap-y-12 px-4 py-28 md:max-w-screen-xl md:grid-cols-2 md:px-8 lg:grid-cols-3">
+    <div>
+      <h2 class="xl:text-5xl text-4xl font-medium text-white text-center">
+  Gallery
+      </h2>
+    </div>
+  </div>
+</section>
+    <!-- header section starts -->
+    <section class="">
+        <%= render "layouts/Vnavbar" %>
+    </section>
+    <!-- header section ends -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        <% @galleries.each do |gallery| %>
+        <a href="<%= galleries_details_path(gallery) %>" class="block">
+            <div class="group cursor-pointer relative gallery-card">
+                <%= image_tag(gallery.image, class: "w-full h-48 object-cover rounded-lg") %>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                        View
+                    </button>
+                </div>
+            </div>
+        </a>
+        <% end %>
+    </div>
+
+    <!-- footer section starts -->
+    <%= render "layouts/Vfooter" %>
+    <!-- footer section ends -->
+
+</body>
+
+</html>

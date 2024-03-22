@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .name-tag {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      transform: rotateX(15deg);
+    }
+  </style>
+</head>
+<body class="bg-black">
+<!-- Back button -->
+<a href="<%= teachers_summary_path(previous_url: params[:previous_url]) %>" class="flex items-center justify-center text-yellow-500 hover:text-yellow-600 w-12 h-12 rounded-full bg-gray-800 md:w-16 md:h-16 m-[4%] absolute z-30 top-[1%] left-[-1%]">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+  </svg>
+</a>
+
+  
+  <div class=" my-[4%] flex flex-col md:flex-row bg-gray-50 shadow-lg rounded-lg max-w-6xl mx-auto overflow-hidden">
+    <!-- Image Section -->
+    <div class="w-full md:w-2/5 overflow-hidden">
+      <%= image_tag(@teacher.image, class: "w-full h-auto object-cover rounded-t-lg md:rounded-l-lg") %>
+    </div>
+  
+    <!-- Details Section -->
+    <div class="w-full md:w-3/5 p-8">
+      <h2 class="font-bold text-4xl md:text-5xl text-gray-800 mb-4 name-tag"><%= @teacher.name %></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <p class="text-gray-700 text-lg font-semibold mb-2">Designation</p>
+          <p class="text-gray-700 md:text-xl"><%= @teacher.designation %></p>
+        </div>
+        <div>
+          <p class="text-gray-700 text-lg font-semibold mb-2">Qualification</p>
+          <p class="text-gray-700 md:text-xl"><%= @teacher.qualification %></p>
+        </div>
+        <div>
+          <p class="text-gray-700 text-lg font-semibold mb-2">Experience</p>
+          <p class="text-gray-700 md:text-xl"><%= @teacher.experience %></p>
+        </div>
+        <div>
+          <p class="text-gray-700 text-lg font-semibold mb-2">Area of Expertise</p>
+          <p class="text-gray-700 md:text-xl"><%= @teacher.area_of_expertise %></p>
+        </div>
+        <div>
+          <p class="text-gray-700 text-lg font-semibold mb-2">Department</p>
+          <p class="text-gray-700 md:text-xl"><%= @teacher.department %></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

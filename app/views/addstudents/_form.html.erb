@@ -1,0 +1,178 @@
+<%= form_with(model: addstudent, class: "contents") do |form| %>
+
+  <div class="my-5">
+    <div id="image-preview" class="mt-2"></div>
+    <%= form.label :photograph, class: "block font-medium mb-1" %>
+    <%= form.file_field :photograph, accept: "image/*", onchange: "previewImage(this);", class: "block outline-none" %>
+    <% if addstudent.errors.has_key?(:photograph) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:photograph).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:first_name) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:first_name).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :enrollment_number %>
+    <%= form.number_field :enrollment_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:enrollment_number) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:enrollment_number).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:middle_name) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:middle_name).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :surname %>
+    <%= form.text_field :surname, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:surname) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:surname).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :date_of_birth %>
+    <%= form.date_field :date_of_birth, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:date_of_birth) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:date_of_birth).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :gender %>
+    <%= form.select :gender, ['Select_Gender','Female', 'Male'], {}, class: "block w-full mt-2 p-3 border border-gray-300 rounded-md shadow-sm outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-300" %>
+    <% if addstudent.errors.has_key?(:gender) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:gender).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :phone_number %>
+    <%= form.number_field :phone_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", placeholder: "+91 XXXXXXXXXX" %>
+    <% if addstudent.errors.has_key?(:phone_number) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:phone_number).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:email) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:email).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:address) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:address).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :fathers_name %>
+    <%= form.text_field :fathers_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:fathers_name) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:fathers_name).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :mothers_name %>
+    <%= form.text_field :mothers_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:mothers_name) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:mothers_name).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :parents_phone_number %>
+    <%= form.number_field :parents_phone_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", placeholder: "+91 XXXXXXXXXX" %>
+    <% if addstudent.errors.has_key?(:parents_phone_number) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:parents_phone_number).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :job_placement %>
+    <%= form.text_field :job_placement, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if addstudent.errors.has_key?(:job_placement) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:job_placement).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :marital_status %>
+    <%= form.select :marital_status, ['Select_Status','Married', 'Not-Married'], {}, class: "block w-full mt-2 p-3 border border-gray-300 rounded-md shadow-sm outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-300" %>
+    <% if addstudent.errors.has_key?(:marital_status) %>
+      <div class="text-red-500 mt-1">
+        <%= addstudent.errors.full_messages_for(:marital_status).first %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
+
+<script>
+  function previewImage(input) {
+    var preview = document.getElementById('image-preview');
+    preview.innerHTML = '';
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        img.classList.add('rounded-full', 'h-20', 'w-20', 'object-cover');
+        preview.appendChild(img);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+

@@ -1,0 +1,32 @@
+<div id="<%= dom_id timetable %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Division:</strong>
+    <%= timetable.division_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Day:</strong>
+    <%= timetable.day_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Time slot:</strong>
+    <%= timetable.time_slot_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subject:</strong>
+    <%= timetable.subject_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Teacher:</strong>
+    <%= timetable.teacher_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this timetable", timetable, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this timetable", edit_timetable_path(timetable), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

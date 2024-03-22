@@ -1,0 +1,130 @@
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(to right, #fafafa, #fcfcfc);
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+    }
+
+    blockquote {
+        font-size: 2rem;
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    cite {
+        display: block;
+        text-align: right;
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #888;
+    }
+
+    blockquote q {
+        font-family: Georgia, serif;
+        font-style: italic;
+        letter-spacing: 0.1rem;
+    }
+
+    blockquote q span {
+        will-change: opacity, filter;
+        opacity: 0;
+        filter: blur(0px);
+        color: #000;
+        font-size: 24px;
+    }
+
+    q {
+        quotes: "“" "”" "‘" "’";
+    }
+
+    q:before {
+        content: open-quote;
+        margin-right: 0.8rem;
+        color: #555;
+    }
+
+    q:after {
+        content: close-quote;
+        color: #555;
+    }
+
+    q:before,
+    q:after {
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+        blockquote {
+            font-size: 1.5rem;
+        }
+
+        cite {
+            font-size: 0.8rem;
+        }
+
+        blockquote q span {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<blockquote contenteditable="true">
+    <q>"Teachers plant the seeds of knowledge that last a lifetime."</q>
+    <cite>Unknown</cite>
+</blockquote>
+
+<script>
+    function splitWords() {
+        let quote = document.querySelector("blockquote q");
+        quote.innerText.replace(/(<([^>]+)>)/ig, "");
+        quotewords = quote.innerText.split(" "),
+            wordCount = quotewords.length;
+        quote.innerHTML = "";
+        for (let i = 0; i < wordCount; i++) {
+            quote.innerHTML += "<span>" + quotewords[i] + "</span>";
+            if (i < quotewords.length - 1) {
+                quote.innerHTML += " ";
+            }
+        }
+        quotewords = document.querySelectorAll("blockquote q span");
+        fadeWords(quotewords);
+    }
+
+    function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function fadeWords(quotewords) {
+        Array.prototype.forEach.call(quotewords, function (word) {
+            let animate = word.animate([{
+                opacity: 0,
+                filter: "blur(" + getRandom(2, 5) + "px)"
+            }, {
+                opacity: 1,
+                filter: "blur(0px)"
+            }],
+                {
+                    duration: 1000,
+                    delay: getRandom(500, 3300),
+                    fill: 'forwards'
+                }
+            );
+            animate.onfinish = function () {
+                // Restart the animation when it finishes
+                fadeWords([word]);
+            };
+        });
+    }
+
+    splitWords();
+</script>

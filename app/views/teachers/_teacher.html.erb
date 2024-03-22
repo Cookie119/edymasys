@@ -1,0 +1,27 @@
+<div class="mx-auto md:w-2/3 w-full px-4">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-100 text-green-800 mb-5 font-medium rounded-lg text-center" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <h2 class="text-xl font-bold mb-4"><%= teacher.name %></h2>
+
+    <% if teacher.image.attached? %>
+      <%= image_tag teacher.image, class: "rounded-full h-32 w-32 object-cover mb-4 mx-auto" %>
+    <% else %>
+      <p class="text-center mb-4">No Image</p>
+    <% end %>
+
+    <div class="grid grid-cols-2 gap-4">
+      <p class="text-gray-700"><strong>Designation:</strong> <%= teacher.designation %></p>
+      <p class="text-gray-700"><strong>Qualification:</strong> <%= teacher.qualification %></p>
+      <p class="text-gray-700"><strong>Experience:</strong> <%= teacher.experience %></p>
+      <p class="text-gray-700"><strong>Area of Expertise:</strong> <%= teacher.area_of_expertise %></p>
+      <p class="text-gray-700"><strong>Department:</strong> <%= teacher.department %></p>
+    </div>
+    
+    <% if action_name != "show" %>
+      <%= link_to "Show this teacher", teacher, class: "block bg-blue-500 text-white py-2 px-4 rounded-md text-center mt-4 hover:bg-blue-600" %>
+    <% end %>
+  </div>
+</div>

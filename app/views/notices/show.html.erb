@@ -1,0 +1,24 @@
+<div class="mx-auto md:w-2/3 w-full flex flex-col items-center">
+  <% if notice.present? %>
+    <div class="my-5">
+      <div class="bg-green-100 border border-green-500 text-green-700 px-4 py-2 rounded-lg" role="alert">
+        <%= notice %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="w-full max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+    <%= render @notice %>
+
+    <div class="mt-4 flex justify-between">
+      <%= link_to "Edit", edit_notice_path(@notice), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <div class="inline-block ml-2">
+        <%= button_to "Destroy", notice_path(@notice), method: :delete, class: "rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      </div>
+      <%= link_to "Back to Notices", notices_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+  </div>
+
+  <%= link_to 'Download Notice as PDF', notice_path(@notice, format: :pdf), class: "mt-4 rounded-lg py-3 px-5 bg-blue-600 text-white font-medium hover:bg-blue-700 transition duration-300" %>
+
+</div>

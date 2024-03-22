@@ -1,0 +1,44 @@
+<% if entries.any? %>
+  <% sorted_entries = entries.sort_by { |entry| entry.time_slot.start_time } %>
+  <div class="border p-4">
+    <% assembly_added = false %>
+    <% recess_added = false %>
+    <% sorted_entries.each do |entry| %>
+      <% if !assembly_added && entry.time_slot.start_time == sorted_entries.first.time_slot.start_time %>
+        <!-- Assembly -->
+        <div class="time-slot my-2">
+          <div class="class-info">
+            <%= entry.time_slot.start_time.strftime('%I:%M %p') %> - <%= entry.time_slot.end_time.strftime('%I:%M %p') %>
+            <div class="border p-4">
+              Assembly
+            </div>
+          </div>
+        </div>
+        <% assembly_added = true %>
+      <% elsif !recess_added && entry.time_slot.start_time >= sorted_entries[4].time_slot.start_time %>
+        <!-- Recess -->
+        <div class="time-slot my-2">
+          <div class="class-info">
+            <%= entry.time_slot.start_time.strftime('%I:%M %p') %> - <%= entry.time_slot.end_time.strftime('%I:%M %p') %>
+            <div class="border p-4">
+              Recess
+            </div>
+          </div>
+        </div>
+        <% recess_added = true %>
+      <% else %>
+        <!-- Regular Class -->
+        <div class="time-slot my-2">
+          <div class="class-info">
+            <%= entry.time_slot.start_time.strftime('%I:%M %p') %> - <%= entry.time_slot.end_time.strftime('%I:%M %p') %>
+            <div class="border p-4">
+              <%= "#{entry.subject.name} (#{entry.teacher.name})" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% else %>
+  <p class="mt-4 text-lg text-center text-gray-500">No classes scheduled for this day.</p>
+<% end %>

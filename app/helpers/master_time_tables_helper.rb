@@ -1,0 +1,2 @@
+module MasterTimeTablesHelper
+end

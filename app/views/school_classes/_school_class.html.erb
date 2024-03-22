@@ -1,0 +1,22 @@
+<div id="<%= dom_id school_class %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Class name:</strong>
+    <%= school_class.class_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Is active:</strong>
+    <%= school_class.is_active %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Is deleted:</strong>
+    <%= school_class.is_deleted %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this school class", school_class, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this school class", edit_school_class_path(school_class), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

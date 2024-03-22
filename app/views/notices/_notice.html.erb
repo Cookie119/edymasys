@@ -1,0 +1,30 @@
+<div id="<%= dom_id notice %>" class="rounded-lg shadow-md bg-white p-6">
+  <div class="flex flex-col space-y-4">
+    <div class="flex items-center">
+      <span class="font-semibold text-gray-600 mr-2">Title:</span>
+      <span><%= notice.title %></span>
+    </div>
+    <div class="flex items-center">
+      <span class="font-semibold text-gray-600 mr-2">Category:</span>
+      <span><%= notice.category.name %></span>
+    </div>
+    <div class="flex items-center">
+      <span class="font-semibold text-gray-600 mr-2">Content:</span>
+      <span><%= notice.content %></span>
+    </div>
+
+
+    <div class="flex items-center">
+      <span class="font-semibold text-gray-600 mr-2">Created At:</span>
+      <span><%= notice.created_at.strftime('%Y-%m-%d %I:%M %p') %></span>
+    </div>
+  </div>
+
+  <% if action_name != "show" %>
+    <div class="mt-6 flex space-x-4">
+      <%= link_to "Show this notice", notice, class: "rounded-lg py-2 px-4 bg-blue-500 text-white font-semibold hover:bg-blue-600 transition duration-300" %>
+      <%= link_to "Edit this notice", edit_notice_path(notice), class: "rounded-lg py-2 px-4 bg-green-500 text-white font-semibold hover:bg-green-600 transition duration-300" %>
+    </div>
+    <hr class="my-6 border-t-2 border-gray-200">
+  <% end %>
+</div>
