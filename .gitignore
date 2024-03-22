@@ -8,12 +8,18 @@
 /.bundle
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
 
+<<<<<<< HEAD
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -26,10 +32,14 @@
 !/tmp/pids/.keep
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Ignore storage (uploaded files in development and any SQLite databases).
 =======
 # Ignore uploaded files in development.
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+# Ignore storage (uploaded files in development and any SQLite databases).
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 /storage/*
 !/storage/.keep
 /tmp/storage/*
@@ -41,8 +51,14 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4

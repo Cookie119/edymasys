@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 web: rake db:migrate && RAILS_ENV=production bin/rails server -b 0.0.0.0 -p ${PORT:-3000}
+=======
+web: env RUBY_DEBUG_OPEN=true bin/rails server -p 3000
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 css: bin/rails tailwindcss:watch

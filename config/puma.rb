@@ -1,24 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # This configuration file will be evaluated by Puma. The top-level methods that
 # are invoked here are part of Puma's configuration DSL. For more information
 # about methods provided by the DSL, see https://puma.io/puma/Puma/DSL.html.
 
+<<<<<<< HEAD
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
 threads min_threads_count, max_threads_count
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Specifies that the worker count should equal the number of processors in production.
 if ENV["RAILS_ENV"] == "production"
   require "concurrent-ruby"
@@ -34,6 +46,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 port ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
+<<<<<<< HEAD
 =======
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
 # terminating a worker in development environments.
@@ -47,17 +60,23 @@ port ENV.fetch("PORT") { 3000 }
 # Specifies the `environment` that Puma will run in.
 #
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 environment ENV.fetch("RAILS_ENV") { "development" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 
 
 
+<<<<<<< HEAD
 =======
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked web server processes. If using threads and workers together
@@ -77,3 +96,5 @@ plugin :tmp_restart
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4

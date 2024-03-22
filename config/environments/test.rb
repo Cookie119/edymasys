@@ -9,6 +9,9 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   # While tests run files are not watched, reloading is not necessary.
   config.enable_reloading = false
 
@@ -16,6 +19,7 @@ Rails.application.configure do
   # this is usually not necessary, and can slow down your test suite. However, it's
   # recommended that you enable it in continuous integration systems to ensure eager
   # loading is working properly before deploying your code.
+<<<<<<< HEAD
 =======
   # Turn false under Spring and add config.action_view.cache_template_loading = true.
   config.cache_classes = true
@@ -24,6 +28,8 @@ Rails.application.configure do
   # this probably isn't necessary. It's a good idea to do in a continuous integration
   # system, or in some way before deploying your code.
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   config.eager_load = ENV["CI"].present?
 
   # Configure public file server for tests with Cache-Control for performance.
@@ -34,12 +40,16 @@ Rails.application.configure do
 
   # Show full error reports and disable caching.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
+<<<<<<< HEAD
 =======
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -48,6 +58,8 @@ Rails.application.configure do
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
@@ -77,9 +89,15 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+
+  # Raise error when a before_action's only/except options reference missing actions
+  config.action_controller.raise_on_missing_callback_actions = true
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 end

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+# edymasys
+College Project
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -24,6 +30,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
 =======
 # College-Project
 College Project
@@ -64,3 +71,6 @@ This is a [Ruby on Rails](https://rubyonrails.org/) starter app that connects to
 This app was generated with the `rails new` command. Read more about Rails on
 their [official website](https://rubyonrails.org/)
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> a364aa9 (version1)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4

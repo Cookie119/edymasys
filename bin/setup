@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env ruby.exe
 =======
 #!/usr/bin/env ruby
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+#!/usr/bin/env ruby.exe
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 require "fileutils"
 
 # path to your application root.
@@ -10,10 +14,14 @@ APP_ROOT = File.expand_path("..", __dir__)
 
 def system!(*args)
 <<<<<<< HEAD
+<<<<<<< HEAD
   system(*args, exception: true)
 =======
   system(*args) || abort("\n== Command #{args} failed ==")
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+  system(*args, exception: true)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 end
 
 FileUtils.chdir APP_ROOT do

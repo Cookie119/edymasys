@@ -28,10 +28,14 @@ m = Module.new do
     update_index = nil
     ARGV.each_with_index do |a, i|
 <<<<<<< HEAD
+<<<<<<< HEAD
       if update_index && update_index.succ == i && a.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
 =======
       if update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+      if update_index && update_index.succ == i && a.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
         bundler_version = a
       end
       next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
@@ -46,20 +50,28 @@ m = Module.new do
     return gemfile if gemfile && !gemfile.empty?
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     File.expand_path("../Gemfile", __dir__)
 =======
     File.expand_path("../../Gemfile", __FILE__)
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+    File.expand_path("../Gemfile", __dir__)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   end
 
   def lockfile
     lockfile =
       case File.basename(gemfile)
 <<<<<<< HEAD
+<<<<<<< HEAD
       when "gems.rb" then gemfile.sub(/\.rb$/, ".locked")
 =======
       when "gems.rb" then gemfile.sub(/\.rb$/, gemfile)
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+      when "gems.rb" then gemfile.sub(/\.rb$/, ".locked")
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
       else "#{gemfile}.lock"
       end
     File.expand_path(lockfile)
@@ -75,6 +87,7 @@ m = Module.new do
   def bundler_requirement
     @bundler_requirement ||=
 <<<<<<< HEAD
+<<<<<<< HEAD
       env_var_version ||
       cli_arg_version ||
       bundler_requirement_for(lockfile_version)
@@ -82,6 +95,11 @@ m = Module.new do
       env_var_version || cli_arg_version ||
         bundler_requirement_for(lockfile_version)
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+      env_var_version ||
+      cli_arg_version ||
+      bundler_requirement_for(lockfile_version)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   end
 
   def bundler_requirement_for(version)
@@ -89,6 +107,7 @@ m = Module.new do
 
     bundler_gem_version = Gem::Version.new(version)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     bundler_gem_version.approximate_recommendation
 =======
@@ -100,6 +119,9 @@ m = Module.new do
 
     requirement
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+    bundler_gem_version.approximate_recommendation
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   end
 
   def load_bundler!

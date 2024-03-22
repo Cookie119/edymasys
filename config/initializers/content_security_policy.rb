@@ -17,6 +17,7 @@
 #   end
 #
 <<<<<<< HEAD
+<<<<<<< HEAD
 #   # Generate session nonces for permitted importmap, inline scripts, and inline styles.
 #   config.content_security_policy_nonce_generator = ->(request) { request.session.id.to_s }
 #   config.content_security_policy_nonce_directives = %w(script-src style-src)
@@ -25,6 +26,11 @@
 #   config.content_security_policy_nonce_generator = ->(request) { request.session.id.to_s }
 #   config.content_security_policy_nonce_directives = %w(script-src)
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+#   # Generate session nonces for permitted importmap, inline scripts, and inline styles.
+#   config.content_security_policy_nonce_generator = ->(request) { request.session.id.to_s }
+#   config.content_security_policy_nonce_directives = %w(script-src style-src)
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 #
 #   # Report violations without enforcing the policy.
 #   # config.content_security_policy_report_only = true

@@ -1,10 +1,14 @@
 development:
 <<<<<<< HEAD
+<<<<<<< HEAD
   adapter: async
 =======
   adapter: redis
   url: redis://localhost:6379/1
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+  adapter: async
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 
 test:
   adapter: test
@@ -13,7 +17,11 @@ production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
 <<<<<<< HEAD
+<<<<<<< HEAD
   channel_prefix: project_production
 =======
   channel_prefix: ruby_rails_postgres_production
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+  channel_prefix: project_production
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4

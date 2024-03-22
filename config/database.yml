@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 development:
   adapter: postgresql
   encoding: UTF8
@@ -19,6 +22,7 @@ test:
   host: localhost
   port: 5432
 
+<<<<<<< HEAD
 =======
 # PostgreSQL. Versions 9.3 and up are supported.
 #
@@ -105,3 +109,5 @@ production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4

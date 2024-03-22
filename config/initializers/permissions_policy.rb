@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # Be sure to restart your server when you modify this file.
 
 # Define an application-wide HTTP permissions policy. For further
@@ -11,6 +14,7 @@
 #   policy.usb         :none
 #   policy.fullscreen  :self
 #   policy.payment     :self, "https://secure.example.com"
+<<<<<<< HEAD
 =======
 # Define an application-wide HTTP permissions policy. For further
 # information see https://developers.google.com/web/updates/2018/06/feature-policy
@@ -23,4 +27,6 @@
 #   f.fullscreen  :self
 #   f.payment     :self, "https://secure.example.com"
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 # end

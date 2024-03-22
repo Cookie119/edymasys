@@ -2,26 +2,38 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   config.hosts << "rails-production-e2a4.up.railway.app"
 
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+
+  config.hosts << "quality-rwanda-computation-sorry.trycloudflare.com"
+
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   config.enable_reloading = true
 
   # Do not eager load code on boot.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+<<<<<<< HEAD
 =======
   config.cache_classes = false
 
   # Do not eager load code on boot.
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   config.eager_load = false
 
   # Show full error reports.
@@ -70,11 +82,17 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   # Highlight code that enqueued background job in logs.
   config.active_job.verbose_enqueue_logs = true
 
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+  # Highlight code that enqueued background job in logs.
+  config.active_job.verbose_enqueue_logs = true
+
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -87,9 +105,15 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
 =======
 >>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
+=======
+
+  # Raise error when a before_action's only/except options reference missing actions
+  config.action_controller.raise_on_missing_callback_actions = true
+>>>>>>> f60aefb84e6a000dbe20e59d041d0ef76f9ddbe4
 end
