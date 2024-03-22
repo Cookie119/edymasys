@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+<<<<<<< HEAD
 
 ruby "3.2.2"
 
@@ -50,15 +51,31 @@ end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
+=======
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby "3.1.2"
+
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+<<<<<<< HEAD
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+=======
+# Use postgresql as the database for Active Record
+gem "pg", "~> 1.1"
+
+# Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 5.0"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -69,15 +86,22 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+<<<<<<< HEAD
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
+<<<<<<< HEAD
 # gem "redis", ">= 4.0.1"
+=======
+gem "redis", "~> 4.0"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -86,17 +110,31 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+<<<<<<< HEAD
 gem "tzinfo-data", platforms: %i[ windows jruby ]
+=======
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+<<<<<<< HEAD
+=======
+# Use Sass to process CSS
+# gem "sassc-rails"
+
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+<<<<<<< HEAD
   gem "debug", platforms: %i[ mri windows ]
+=======
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 end
 
 group :development do
@@ -110,9 +148,16 @@ group :development do
   # gem "spring"
 end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+<<<<<<< HEAD
+=======
+  gem "webdrivers"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 end

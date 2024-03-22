@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_03_16_053603) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -218,4 +219,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_16_053603) do
   add_foreign_key "master_timetables", "teachers"
   add_foreign_key "master_timetables", "time_slots"
   add_foreign_key "notices", "categories"
+=======
+ActiveRecord::Schema[7.0].define(version: 0) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "timescaledb"
+
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 end

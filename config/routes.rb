@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
   resources :addstudents
   resources :galleries
@@ -77,4 +78,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#index"
+=======
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 end

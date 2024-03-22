@@ -27,7 +27,11 @@ m = Module.new do
     bundler_version = nil
     update_index = nil
     ARGV.each_with_index do |a, i|
+<<<<<<< HEAD
       if update_index && update_index.succ == i && a.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
+=======
+      if update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
         bundler_version = a
       end
       next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
@@ -41,13 +45,21 @@ m = Module.new do
     gemfile = ENV["BUNDLE_GEMFILE"]
     return gemfile if gemfile && !gemfile.empty?
 
+<<<<<<< HEAD
     File.expand_path("../Gemfile", __dir__)
+=======
+    File.expand_path("../../Gemfile", __FILE__)
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
   end
 
   def lockfile
     lockfile =
       case File.basename(gemfile)
+<<<<<<< HEAD
       when "gems.rb" then gemfile.sub(/\.rb$/, ".locked")
+=======
+      when "gems.rb" then gemfile.sub(/\.rb$/, gemfile)
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
       else "#{gemfile}.lock"
       end
     File.expand_path(lockfile)
@@ -62,9 +74,14 @@ m = Module.new do
 
   def bundler_requirement
     @bundler_requirement ||=
+<<<<<<< HEAD
       env_var_version ||
       cli_arg_version ||
       bundler_requirement_for(lockfile_version)
+=======
+      env_var_version || cli_arg_version ||
+        bundler_requirement_for(lockfile_version)
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
   end
 
   def bundler_requirement_for(version)
@@ -72,7 +89,17 @@ m = Module.new do
 
     bundler_gem_version = Gem::Version.new(version)
 
+<<<<<<< HEAD
     bundler_gem_version.approximate_recommendation
+=======
+    requirement = bundler_gem_version.approximate_recommendation
+
+    return requirement unless Gem.rubygems_version < Gem::Version.new("2.7.0")
+
+    requirement += ".a" if bundler_gem_version.prerelease?
+
+    requirement
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
   end
 
   def load_bundler!

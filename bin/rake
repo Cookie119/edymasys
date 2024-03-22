@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env ruby.exe
+=======
+#!/usr/bin/env ruby
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 require_relative "../config/boot"
 require "rake"
 Rake.application.run

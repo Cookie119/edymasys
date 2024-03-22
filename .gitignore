@@ -7,10 +7,13 @@
 # Ignore bundler config.
 /.bundle
 
+<<<<<<< HEAD
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
 
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -22,7 +25,11 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
+<<<<<<< HEAD
 # Ignore storage (uploaded files in development and any SQLite databases).
+=======
+# Ignore uploaded files in development.
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 /storage/*
 !/storage/.keep
 /tmp/storage/*
@@ -33,6 +40,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+<<<<<<< HEAD
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b

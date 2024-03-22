@@ -4,7 +4,11 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
+<<<<<<< HEAD
   config.enable_reloading = false
+=======
+  config.cache_classes = true
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -13,6 +17,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
+<<<<<<< HEAD
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
@@ -22,6 +27,18 @@ Rails.application.configure do
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
   # config.public_file_server.enabled = false
+=======
+  config.consider_all_requests_local       = false
+  config.action_controller.perform_caching = true
+
+  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
+  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+  # config.require_master_key = true
+
+  # Disable serving static files from the `/public` folder by default since
+  # Apache or NGINX already handles this.
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -44,6 +61,7 @@ Rails.application.configure do
   # config.action_cable.url = "wss://example.com/cable"
   # config.action_cable.allowed_request_origins = [ "http://example.com", /http:\/\/example.*/ ]
 
+<<<<<<< HEAD
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   # Can be used together with config.force_ssl for Strict-Transport-Security and secure cookies.
   # config.assume_ssl = true
@@ -55,21 +73,37 @@ Rails.application.configure do
   config.logger = ActiveSupport::Logger.new(STDOUT)
     .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
     .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
+=======
+  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+  # config.force_ssl = true
+
+  # Include generic and useful information about system operation, but avoid logging too much
+  # information to avoid inadvertent exposure of personally identifiable information (PII).
+  config.log_level = :info
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
+<<<<<<< HEAD
   # Info include generic and useful information about system operation, but avoids logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII). If you
   # want to log everything, set the level to "debug".
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
+<<<<<<< HEAD
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "project_production"
+=======
+  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_name_prefix = "ruby_rails_postgres_production"
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 
   config.action_mailer.perform_caching = false
 
@@ -84,6 +118,7 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
+<<<<<<< HEAD
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
@@ -94,4 +129,21 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+=======
+  # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.log_formatter = ::Logger::Formatter.new
+
+  # Use a different logger for distributed setups.
+  # require "syslog/logger"
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
+
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
 end

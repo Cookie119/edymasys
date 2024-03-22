@@ -5,5 +5,8 @@ db/schema.rb linguist-generated
 
 # Mark any vendored files as having been vendored.
 vendor/* linguist-vendored
+<<<<<<< HEAD
 config/credentials/*.yml.enc diff=rails_credentials
 config/credentials.yml.enc diff=rails_credentials
+=======
+>>>>>>> 619fbaf1af67af1e60365c9f190a873b6d7a3d5b
