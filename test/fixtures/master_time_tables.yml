@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  division: one
+  subject: one
+  teacher: one
+  day: MyString
+  time_slot: 1
+
+two:
+  division: two
+  subject: two
+  teacher: two
+  day: MyString
+  time_slot: 1

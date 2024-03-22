@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="backdrops">
+    <%= render "layouts/Vnavbar"%>
+    <%= render "sVision"%>
+
+    <%# <%= render "mission"%> 
+
+<style>
+  .backdrops{
+    background-color: #FFFFFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23FFFFFF' stroke-width='0.4' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23FFFFFF'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F7FF0A'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F7FF0A'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F7FF0A'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  }
+</style>
+<section id="new-features" class="py-8  sm:py-10 lg:py-16">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="text-center">
+          <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
+              Our Best Facilities
+          </h2>
+          <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8">
+              We Try To provide the best Eco-System for our Students and Make Our Best Affords To Make Them Better..    
+          </p>
+      </div>
+      <div class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
+          <!-- Feature 1 -->
+          <a href="#campus" class="md:p-8 lg:p-14 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+              <div class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
+                  <%= image_tag("campus.gif",class:"rounded-full") %>
+              </div>
+              <h3 class="mt-12 text-xl font-bold text-gray-900">Campus</h3>
+              <p class="mt-5 text-base text-gray-600">Track and analyze your data with powerful analytics tools. Gain valuable insights for better decision-making.</p>
+          </a>
+
+          <!-- Feature 2 -->
+          <a href="#tFacility" class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+              <div class="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center ">
+                <%= image_tag("teach.gif",class:"rounded-full") %>
+              </div>
+              <h3 class="mt-12 text-xl font-bold text-gray-900">Teaching Facilities</h3>
+              <p class="mt-5 text-base text-gray-600">Seamlessly integrate with your existing tools and systems for a smooth workflow experience.</p>
+          </a>
+
+          <!-- Feature 3 -->
+          <a href="#hInfrastructure" class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+              <div class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
+                <%= image_tag("suitcase.gif",class:"rounded-full") %>
+              </div>
+              <h3 class="mt-12 text-xl font-bold text-gray-900">Hostel Infrastructure</h3>
+              <p class="mt-5 text-base text-gray-600">Ensure the safety of your data with top-notch security features. Your privacy is our priority.</p>
+          </a>
+
+          <!-- Feature 4 -->
+          <a href="#sInfrastructure" class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+              <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
+                <%= image_tag("basketball.gif",class:"rounded-full") %>
+              </div>
+              <h3 class="mt-12 text-xl font-bold text-gray-900">Sports Infrastructure</h3>
+              <p class="mt-5 text-base text-gray-600">Access your data from anywhere with seamless cloud integration. Work without boundaries.</p>
+          </a>
+
+          <!-- Feature 5 -->
+          <a href="#library" class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+            <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
+                <%= image_tag("library.gif",class:"rounded-full") %>
+            </div>
+            <h3 class="mt-12 text-xl font-bold text-gray-900">School Library</h3>
+            <p class="mt-5 text-base text-gray-600">Access your data from anywhere with seamless cloud integration. Work without boundaries.</p>
+        </a>
+
+        <!-- Feature 6 -->
+        <a href="#eFacility" class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center border hover:bg-gray-100 p-2">
+          <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
+                <%= image_tag("calendar.gif",class:"rounded-full") %>
+          </div>
+          <h3 class="mt-12 text-xl font-bold text-gray-900">Event Facility</h3>
+          <p class="mt-5 text-base text-gray-600">Access your data from anywhere with seamless cloud integration. Work without boundaries.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- <%# card 1 %> -->
+   <div class="border-4 border-blue-900 p-2 border-x ">
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="campus">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center ">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          Campus
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">  
+          Our school campus features inclusive spaces, advanced technology integration, outdoor learning areas, personalized education plans, and multidisciplinary support services, fostering a vibrant community focused on individualized learning and holistic development.
+        </p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Inclusive Spaces
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Technology Integration
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Vocational Training
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Specialized Facilities
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Individualized Education
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Community Engagement
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-blue-900 bg-blue-900 p-2 rounded">
+        
+        <%= image_tag("campus2.jpg", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96 ")%>  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- <%# card 2 %> -->
+    <div class="bg-blue-900">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-blue-900 w-full bg-cover" id="tFacility">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          Teaching Facilities
+        </h2>
+        <p class="text-base text-white md:text-lg">
+          Our teaching facilities offer modern classrooms, interactive learning tools, and adaptable spaces to accommodate diverse instructional needs, fostering an engaging and supportive environment for personalized learning and academic excellence.
+        </p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase text-white">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Bi-Lingual teaching
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Adaptable Spaces
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Student Help
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Career Guidance
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Individualized Instruction
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-white" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Student Progress Monitoring
+          </li>
+
+
+          <!-- button -->
+
+
+          <!-- button -->
+
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-white bg-white p-2 rounded">
+      <%= image_tag("TeachingF.JPG", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96")%>  
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <%# card 3 %> -->
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="hInfrastructure">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          Hostel Infrastructure
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+        </p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Comfortable Accommodation
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Nutritious Meals
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Study Areas
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Supportive Staff
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Laundry Facilities
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Health Services
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-blue-900 bg-blue-900 p-2 rounded">
+      <%= image_tag("hostel.jpg", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96")%>  
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<!-- <%# card 4 %> -->
+<div class="bg-blue-900">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-blue-900 w-full bg-cover" id="sInfrastructure">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          Sports Infrastructure
+        </h2>
+        <p class="text-base text-white md:text-lg">
+          Our sports facilities offer diverse opportunities for physical activity, with well-maintained fields, courts, and equipment. Experienced coaches encourage teamwork, skill development, and a passion for healthy competition.
+        </p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase text-white">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Diverse Sports Options
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Quality Equipment
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Teamwork Emphasis
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Safety Measures
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Inclusive Sports Programs
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Flexible Sports Scheduling
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-white bg-white p-2 rounded">
+      <%= image_tag("Sports.JPG", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96")%>  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <%# card 5 %> -->
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="library">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          School Library
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Our library offers a vast collection, digital resources, and quiet study areas. Knowledgeable librarians assist with research, while educational workshops and literary events enrich students' learning experiences.</p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Vast Collection
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Quiet Study Areas
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Knowledgeable Librarians
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Research Assistance
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Specialized Collections
+          </li>
+          <li class="flex">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Group Study Rooms
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-blue-900 bg-blue-900 p-2 rounded">
+      <%= image_tag("sLibrary.JPG", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96")%>  
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- <%# card 6 %> -->
+<div class="bg-blue-900">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-blue-900 w-full bg-cover" id="eFacility">
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          Event Facility
+        </h2>
+        <p class="text-base text-white md:text-lg">
+          Our event facility offers a spacious venue with flexible seating and audio-visual equipment. Event planning support ensures seamless execution, accommodating diverse needs for memorable gatherings and functions.
+        </p>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase text-white">Features</p>
+      <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Celebrate all festivals
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Various cultural events
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Social gathering
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Flexible Seating Arrangements
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Spacious Venue
+          </li>
+          <li class="flex text-white">
+            <span class="mr-1">
+              <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </span>
+            Audio-Visual Equipment
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="border-4 border-white bg-white p-2 rounded">
+      <%= image_tag("SEvent.JPG", class:"object-cover w-full h-56 rounded shadow-lg sm:h-96")%>  
+    </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+  <div>
+      <a title="Back To Top" href="#" class="fixed bottom-8 right-8 md:bottom-16 md:right-16 z-50 bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-md hover:shadow-lg transform hover:scale-105 transition-all">
+          <%= image_tag("airplane.gif", class: "object-cover object-center w-full h-full rounded-full") %>
+      </a>
+  </div>
+</div>
+</div>
+ <%= render "layouts/Vfooter" %>
+</body>
+</html>

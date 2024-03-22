@@ -1,0 +1,63 @@
+<div class="hero">
+    <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>
+        <rect fill='rgba(128, 128, 128, 0.0045)' width='24' height='24'/>
+        <defs>
+          <linearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(276,0.5,0.5)'>
+            <stop offset='0' stop-color='#103E52'/>
+            <stop offset='1' stop-color='#7DCCC9'/>
+          </linearGradient>
+        </defs>
+        <pattern id='b' width='19' height='19' patternUnits='userSpaceOnUse'>
+          <circle fill='#086564' cx='9.5' cy='9.5' r='9.5'/>
+        </pattern>
+        <rect width='100%' height='100%' fill='url(#a)'/>
+        <rect width='100%' height='100%' fill='url(#b)' fill-opacity='0.2'/>
+      </svg>
+     
+  </div>
+
+
+<style>
+@import url('https://rsms.me/inter/inter.css');
+
+html,
+body {
+  background: #ffffff;
+}
+
+
+
+.hero {
+  background: no-repeat center center;
+  justify-content: center;
+  background-size: cover;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.down {
+  text-align: center;
+  position: absolute;
+  opacity: 0.6;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+}
+
+.content {
+  box-shadow: 0 0 100px rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  position: relative;
+  background: #f3f3f3;
+  height: 2000px;
+  display: flex;
+  top: 100vh;
+}
+</style>

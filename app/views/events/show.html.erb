@@ -1,0 +1,31 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <div id="<%= dom_id @event %>">
+      <% if @event.image.attached? %>
+        <%= image_tag(@event.image, class: "rounded-full h-20 w-20 object-cover mb-2") %>
+      <% end %>
+
+      <p class="my-2">
+        <strong class="block font-medium mb-1">Title:</strong>
+        <%= @event.title %>
+      </p>
+
+      <p class="my-2">
+        <strong class="block font-medium mb-1">Content:</strong>
+        <%= @event.content %>
+      </p>
+    </div>
+
+    <%= link_to "Edit this event", edit_event_path(@event), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+    <div class="inline-block ml-2">
+      <%= button_to "Destroy this event", event_path(@event), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+
+    <%= link_to "Back to events", events_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

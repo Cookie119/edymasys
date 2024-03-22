@@ -1,0 +1,36 @@
+<% # Group entries by day %>
+<% @master_timetable.group_by(&:day_id).each do |day_id, entries| %>
+  <div class="mt-4">
+    <h3 class="text-lg font-semibold mb-2"><%= entries.first.day.name %></h3>
+    <%= form_tag(update_master_timetable_path, method: :post, class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4", id: "form_#{day_id}") do %>
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th class="px-4 py-2">Time Slot</th>
+            <th class="px-4 py-2">Subject</th>
+            <th class="px-4 py-2">Teacher</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% # Sort entries by time_slot start_time before iterating %>
+          <% entries.sort_by { |entry| entry.time_slot.start_time }.each do |entry| %>
+            <tr>
+              <% start_time, end_time = entry.time_slot.start_time.strftime('%I:%M %p'), entry.time_slot.end_time.strftime('%I:%M %p') %>
+              <td class="border px-4 py-2"><%= start_time %> - <%= end_time %></td>
+              <td class="border px-4 py-2">
+                <%= hidden_field_tag "master_timetable[][id]", entry.id %>
+                <%= hidden_field_tag "master_timetable[][day_id]", entry.day_id %>
+                <%= hidden_field_tag "master_timetable[][time_slot_id]", entry.time_slot_id %>
+                <%= select_tag "master_timetable[][subject_id]", options_for_select(@subjects.map { |subject| [subject.name, subject.id] }, entry.subject_id), class: "w-full" %>
+              </td>
+              <td class="border px-4 py-2">
+                <%= select_tag "master_timetable[][teacher_id]", options_for_select(@teachers.map { |teacher| [teacher.name, teacher.id] }, entry.teacher_id), class: "w-full" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= button_tag "Update Master Timetable", type: "submit", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline", data: { confirm: "Are you sure you want to update the timetable for #{entries.first.day.name}?" } %>
+    <% end %>
+  </div>
+<% end %>

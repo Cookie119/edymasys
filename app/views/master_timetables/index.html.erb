@@ -1,0 +1,74 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="m-5 ">
+  <nav aria-label="breadcrumb">
+    <ul class="flex flex-wrap space-x-3 text-sm font-medium">
+        <li class="flex items-center space-x-3">
+            <a href="#" class="flex items-center space-x-1 text-gray-800">
+                <svg class="h-4 w-4 shrink-0 fill-gray-500" aria-hidden="true" viewBox="0 0 256 256">
+                    <path
+                        d="M184 32H72A16 16 0 0056 48V224a8.1 8.1.0 004.1 7 7.6 7.6.0 003.9 1 7.9 7.9.0 004.2-1.2L128 193.4l59.7 37.4a8.3 8.3.0 008.2.2 8.1 8.1.0 004.1-7V48A16 16 0 00184 32z">
+                    </path>
+                </svg>
+                <%=link_to"Dashboard", maker_index_path %>
+            </a>
+        </li>
+        <li class="flex items-center space-x-3">
+            <div aria-hidden="true" class="h-4 w-px rotate-12 rounded-full bg-gray-300"></div>
+            <a href="#" class="flex items-center space-x-1 text-gray-800">
+                <svg class="h-4 w-4 shrink-0 fill-gray-500" aria-hidden="true" viewBox="0 0 256 256">
+                    <path
+                        d="M2e2 32H163.7a47.8 47.8.0 00-71.4.0H56A16 16 0 0040 48V216a16 16 0 0016 16H2e2a16 16 0 0016-16V48A16 16 0 002e2 32zm-72 0a32.1 32.1.0 0132 32H96a32.1 32.1.0 0132-32z">
+                    </path>
+                </svg>
+                <span>master_timetable</span>
+            </a>
+        </li>
+     
+    </ul>
+</nav>
+  </div>
+  <div class="flex justify-between items-center">
+
+    <h1 class="font-bold text-4xl">Master Timetables</h1>
+    <%= link_to "Add New Row", new_master_timetable_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+ <%= link_to 'Download All Master Timetables as PDF', render_master_timetable_pdf_path(format: :pdf), class: "btn btn-primary" %>
+
+  <table class="w-full table-auto border-collapse mt-4">
+    <thead>
+      <tr>
+        <th class="border px-4 py-2">Day</th>
+        <th class="border px-4 py-2">Time Slot</th>
+        <th class="border px-4 py-2">Subject</th>
+        <th class="border px-4 py-2">Division</th>
+        <th class="border px-4 py-2">Teacher</th>
+        <th class="border px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @master_timetables.each do |master_timetable| %>
+        <tr>
+          <td class="border px-4 py-2"><%= master_timetable.day.name %></td>
+<td class="border px-4 py-2">
+  <%= master_timetable.time_slot.start_time.strftime('%I:%M %p') %> -
+  <%= master_timetable.time_slot.end_time.strftime('%I:%M %p') %>
+</td>
+
+          <td class="border px-4 py-2"><%= master_timetable.subject.name %></td>
+          <td class="border px-4 py-2"><%= master_timetable.division.division %></td>
+          <td class="border px-4 py-2"><%= master_timetable.teacher.name %></td>
+          <td class="border px-4 py-2">
+            <%= link_to "Show", master_timetable, class: "text-blue-500", title: "Show details" %> |
+            <%= link_to "Edit", edit_master_timetable_path(master_timetable), class: "text-yellow-500", title: "Edit details" %> |
+            <%= button_to "Delete", master_timetable, method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500", title: "Delete record" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

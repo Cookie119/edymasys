@@ -1,0 +1,12 @@
+<div class="h-screen">
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-xs mt-10 mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Select Division</h1>
+    <%= form_tag(display_timetable_path, method: :get) do %>
+      <div class="mb-4">
+        <%= label_tag :division_id, "Select Division", class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= select_tag :division_id, options_for_select(@divisions.map { |division| [division.division, division.id] }), include_blank: true, class: "form-select w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" %>
+      </div>
+      <%= submit_tag "Submit", class: "bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+    <% end %>
+  </div>
+</div>

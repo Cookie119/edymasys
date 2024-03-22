@@ -1,0 +1,44 @@
+<%= form_with(model: notice, class: "contents", multipart: true) do |form| %>
+  <% if form.object.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-4 py-3 font-medium rounded-lg mt-3">
+      <h2 class="text-lg font-semibold"><%= pluralize(form.object.errors.count, "error") %> prohibited this notice from being saved:</h2>
+
+      <ul class="mt-2">
+        <% form.object.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :title, class: "text-gray-800 font-semibold" %>
+    <%= form.text_field :title, class: "block w-full mt-2 p-3 border border-gray-300 rounded-md shadow-sm outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-300" %>
+    <!-- Add validation error message -->
+    <% if form.object.errors.has_key?(:title) %>
+      <p class="text-red-500 text-sm mt-1"><%= form.object.errors.full_messages_for(:title).first %></p>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :category_id, class: "text-gray-800 font-semibold" %>
+    <%= form.select :category_id, Category.all.map { |category| [category.name, category.id] }, {}, class: "block w-full mt-2 p-3 border border-gray-300 rounded-md shadow-sm outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-300" %>
+    <!-- Add validation error message -->
+    <% if form.object.errors.has_key?(:category_id) %>
+      <p class="text-red-500 text-sm mt-1"><%= form.object.errors.full_messages_for(:category_id).first %></p>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :content, class: "text-gray-800 font-semibold" %>
+    <%= form.text_area :content, class: "block w-full mt-2 p-3 border border-gray-300 rounded-md shadow-sm outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 transition duration-300" %>
+    <!-- Add validation error message -->
+    <% if form.object.errors.has_key?(:content) %>
+      <p class="text-red-500 text-sm mt-1"><%= form.object.errors.full_messages_for(:content).first %></p>
+    <% end %>
+  </div>
+
+  <div class="mt-6">
+    <%= form.submit "Save Notice", class: "rounded-lg py-3 px-6 bg-blue-600 text-white font-semibold hover:bg-blue-700 cursor-pointer transition duration-300" %>
+  </div>
+<% end %>

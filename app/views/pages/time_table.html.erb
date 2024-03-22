@@ -1,0 +1,29 @@
+<!-- app/views/pages/time_table.html.erb -->
+<h1>Master Timetable</h1>
+
+<% if @master_timetables.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= link_to 'Day', time_table_path(order: 'day') %></th>
+        <th><%= link_to 'Time Slot', time_table_path(order: 'time_slot') %></th>
+        <th><%= link_to 'Subject', time_table_path(order: 'subject') %></th>
+        <th><%= link_to 'Division', time_table_path(order: 'division') %></th>
+        <th><%= link_to 'Teacher', time_table_path(order: 'teacher') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @master_timetables.each do |timetable| %>
+        <tr>
+          <td><%= timetable.day.name %></td>
+          <td><%= timetable.time_slot.slot %></td>
+          <td><%= timetable.subject.name %></td>
+          <td><%= timetable.division.division %></td>
+          <td><%= timetable.teacher.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No data to display.</p>
+<% end %>

@@ -1,0 +1,31 @@
+<section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative ">
+  
+    
+    <div class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
+        
+        <!-- Image Section -->
+        <div class="lg:inset-y-0 lg:left-0 lg:w-1/2 my-4">
+            <%= image_tag("TStaff.jpeg", class:"h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded") %>
+        </div>
+        <!-- End of Image Section -->
+
+        <!-- Text Section -->
+        <div class="sm:text-center lg:text-left lg:w-1/2 ml-[4%]">
+            <h1 class="text-4xl tracking-tight font-extrabold text-black sm:text-5xl md:text-6xl">
+                <span class="block xl:inline">Our Teaching Saff </span>
+            </h1>
+
+            <p class="mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                Our special school is a nurturing and inclusive community dedicated to empowering students with unique learning needs. For over two decades, we have been providing personalized education and support to help each child reach their full potential. Our experienced teachers and therapists work together to create a tailored learning plan for every student, using evidence-based methods and innovative technology. 
+            </p>
+             
+            <!-- Button Section -->
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div class="rounded-md shadow">
+                    <%= link_to "Read More", teachers_summary_path, class:"w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600 md:py-4 md:text-lg md:px-10"%>
+                </div>
+            </div>
+            <!-- End of Button Section -->
+        </div>
+    </div>
+</section>

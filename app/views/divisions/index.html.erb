@@ -1,0 +1,42 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center">
+  <div>
+  <nav aria-label="breadcrumb">
+    <ul class="flex flex-wrap space-x-3 text-sm font-medium">
+        <li class="flex items-center space-x-3">
+            <a href="#" class="flex items-center space-x-1 text-gray-800">
+                <svg class="h-4 w-4 shrink-0 fill-gray-500" aria-hidden="true" viewBox="0 0 256 256">
+                    <path
+                        d="M184 32H72A16 16 0 0056 48V224a8.1 8.1.0 004.1 7 7.6 7.6.0 003.9 1 7.9 7.9.0 004.2-1.2L128 193.4l59.7 37.4a8.3 8.3.0 008.2.2 8.1 8.1.0 004.1-7V48A16 16 0 00184 32z">
+                    </path>
+                </svg>
+                <%=link_to"Dashboard", maker_index_path %>
+            </a>
+        </li>
+        <li class="flex items-center space-x-3">
+            <div aria-hidden="true" class="h-4 w-px rotate-12 rounded-full bg-gray-300"></div>
+            <a href="#" class="flex items-center space-x-1 text-gray-800">
+                <svg class="h-4 w-4 shrink-0 fill-gray-500" aria-hidden="true" viewBox="0 0 256 256">
+                    <path
+                        d="M2e2 32H163.7a47.8 47.8.0 00-71.4.0H56A16 16 0 0040 48V216a16 16 0 0016 16H2e2a16 16 0 0016-16V48A16 16 0 002e2 32zm-72 0a32.1 32.1.0 0132 32H96a32.1 32.1.0 0132-32z">
+                    </path>
+                </svg>
+                <span>Division</span>
+            </a>
+        </li>
+     
+    </ul>
+</nav>
+  </div>
+    <h1 class="font-bold text-4xl">Divisions</h1>
+    <%= link_to "New division", new_division_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="divisions" class="min-w-full">
+    <%= render @divisions %>
+  </div>
+</div>

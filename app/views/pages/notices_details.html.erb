@@ -1,0 +1,17 @@
+<!-- app/views/pages/notices_details.html.erb -->
+<div class="container mx-auto p-8">
+  <h1 class="text-4xl font-bold text-center mb-8">Notice Details</h1>
+
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
+    <div class="p-6">
+      <h2 class="text-3xl font-semibold mb-4"><%= @notice.title %></h2>
+      <p class="text-gray-800 mb-6"><%= @notice.content %></p>
+
+      <div class="flex items-center justify-between text-sm text-gray-600">
+        <span>Category: <%= @notice.category.name %></span>
+        <span><%= time_ago_in_words(@notice.created_at) %> ago</span>
+      </div>
+    </div>
+  </div>
+    <%= link_to 'Download Notice as PDF', notice_path(@notice, format: :pdf), class: "mt-4 rounded-lg py-3 px-5 bg-blue-600 text-white font-medium hover:bg-blue-700 transition duration-300" %>
+</div>

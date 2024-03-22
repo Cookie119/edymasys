@@ -1,0 +1,45 @@
+<div id="<%= dom_id addstudent %>" class="mx-auto md:w-2/3 w-full">
+  <div class="bg-white border border-gray-300 rounded-md shadow-lg overflow-hidden flex">
+    <% if addstudent.photograph.attached? %>
+      <div class="flex-shrink-0 p-6 flex justify-center items-center">
+        <%= image_tag(addstudent.photograph, class: "rounded-full h-32 w-32 object-cover") %>
+      </div>
+    <% end %>
+
+    <div class="p-6 flex-grow">
+      <div class="px-6 py-4 bg-gray-100 border-b border-gray-300">
+        <h2 class="text-xl font-semibold text-gray-800">Student Details</h2>
+      </div>
+
+      <table class="w-full">
+        <tr>
+          <th class="py-2 px-4 text-left font-semibold border-b border-gray-300">Enrollment Number</th>
+          <td class="py-2 px-4 text-left border-b border-gray-300"><%= addstudent.enrollment_number %></td>
+        </tr>
+        <tr>
+          <th class="py-2 px-4 text-left font-semibold border-b border-gray-300">Name</th>
+          <td class="py-2 px-4 text-left border-b border-gray-300"><%= addstudent.first_name %> <%= addstudent.middle_name %> <%= addstudent.surname %></td>
+        </tr>
+        <tr>
+          <th class="py-2 px-4 text-left font-semibold border-b border-gray-300">Date of Birth</th>
+          <td class="py-2 px-4 text-left border-b border-gray-300"><%= addstudent.date_of_birth %></td>
+        </tr>
+        <tr>
+          <th class="py-2 px-4 text-left font-semibold border-b border-gray-300">Gender</th>
+          <td class="py-2 px-4 text-left border-b border-gray-300"><%= addstudent.gender %></td>
+        </tr>
+        <tr>
+          <th class="py-2 px-4 text-left font-semibold border-b border-gray-300">Phone Number</th>
+          <td class="py-2 px-4 text-left border-b border-gray-300"><%= addstudent.phone_number %></td>
+        </tr>
+      </table>
+
+      <% if action_name != "show" %>
+        <div class="flex justify-center mt-6 gap-2">
+          <%= link_to "Show this Student", addstudent, class: "px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded hover:bg-gray-300 transition duration-300" %>
+          <%= link_to "Edit", edit_addstudent_path(addstudent), class: "px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded hover:bg-gray-300 transition duration-300" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

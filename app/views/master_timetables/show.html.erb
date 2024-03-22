@@ -1,0 +1,47 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <table class="table-auto w-full border-collapse">
+      <thead>
+        <tr>
+          <th class="border px-4 py-2">Attribute</th>
+          <th class="border px-4 py-2">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">Day</td>
+          <td class="border px-4 py-2"><%= @master_timetable.day.name %></td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Time Slot</td>
+          <td class="border px-4 py-2">
+            <%= @master_timetable.time_slot.start_time.strftime('%I:%M %p') %> -
+            <%= @master_timetable.time_slot.end_time.strftime('%I:%M %p') %>
+          </td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Subject</td>
+          <td class="border px-4 py-2"><%= @master_timetable.subject.name %></td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Division</td>
+          <td class="border px-4 py-2"><%= @master_timetable.division.division %></td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Teacher</td>
+          <td class="border px-4 py-2"><%= @master_timetable.teacher.name %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <%= link_to "Edit this master_timetable", edit_master_timetable_path(@master_timetable), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to "Destroy this master_timetable", master_timetable_path(@master_timetable), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <%= link_to "Back to master_timetables", master_timetables_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+
+<%= form_with(model: @master_timetable, class: "contents", local: true) do |form| %>
+  <% if @master_timetable.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(@master_timetable.errors.count, "error") %> prohibited this master timetable from being saved:</h2>
+
+      <ul>
+        <% @master_timetable.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# Display error message for time_slot_id at the top %>
+  <% if @master_timetable.errors[:time_slot_id].any? %>
+    <div class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <%= @master_timetable.errors.full_messages_for(:time_slot_id).first %>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :day_id %>
+    <%= form.collection_select :day_id, Day.all, :id, :name, { prompt: "Select Day" }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full form-field", required: true } %>
+    <p id="day_id-error" class="text-red-500"></p>
+  </div>
+
+  <!-- Other form fields -->
+
+<div class="mb-4">
+  <%= form.label :time_slot_id, "Select Time Slot", class: "block text-base font-medium text-[#07074D]" %>
+  <%= form.select :time_slot_id, options_for_select(@time_slots.map { |time_slot| ["#{format_time(time_slot.start_time)} - #{format_time(time_slot.end_time)}", time_slot.id] }), { prompt: "Select a Time Slot" }, class: "form-select w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" %>
+</div>
+
+
+
+  <!-- Other form fields -->
+
+  <div class="my-5">
+    <%= form.label :subject_id %>
+    <%= form.collection_select :subject_id, Subject.all, :id, :name, { prompt: "Select Subject" }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full form-field", required: true} %>
+    <p id="subject_id-error" class="text-red-500"></p>
+  </div>
+
+  <!-- Other form fields -->
+
+  <div class="my-5">
+    <%= form.label :division_id %>
+    <%= form.collection_select :division_id, Division.all, :id, :division, { prompt: "Select Class" }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full form-field", required: true } %>
+    <p id="division_id-error" class="text-red-500"></p>
+  </div>
+
+  <!-- Other form fields -->
+
+  <div class="my-5">
+    <%= form.label :teacher_id %>
+    <%= form.collection_select :teacher_id, Teacher.all, :id, :name, { prompt: "Select Teacher" }, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full form-field" , required: true } %>
+    <p id="teacher_id-error" class="text-red-500"></p>
+  </div>
+
+  <!-- Other form fields -->
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
